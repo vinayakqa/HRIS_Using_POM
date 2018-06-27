@@ -4,6 +4,7 @@ import com.qait.pom.pomProgram.*;
 
 import org.testng.annotations.BeforeTest;
 
+import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -46,7 +47,7 @@ public class TestCase {
 		String expectedUrl="https://hris.qainfotech.com:8086/time/timesheet";
 		Assert.assertEquals(expectedUrl,driver.getCurrentUrl());
 			TimeSheet time=new TimeSheet(driver);
-			time.today_time("25");
+			time.today_time(""+(new Date().getDate()));
 			//ProfilePage pg=new ProfilePage(driver);
 			//pg.personal_info();
 		}
